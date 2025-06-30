@@ -1,0 +1,26 @@
+{
+  "name": "darlisamorim/REPOSITORY-NAME",
+  "description": "Estrutura base de projeto com organização modular, ideal para aplicações escaláveis.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Darlis A. Amorim",
+      "email": "eu@darlisalvesamorim.dev",
+      "homepage": "https://github.com/darlisamorim"
+    }
+  ],
+  "keywords": [
+    "frontend",
+    "backend",
+    "cerberus"
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Cerberus\\": "app/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
