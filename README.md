@@ -1,23 +1,21 @@
-# Cerberus - Tema WordPress Moderno com TailwindCSS
+# Cerberus ⚔️
 
-**Versão:** 1.0.0  
-**Compatibilidade:** PHP **8+**
-
-É um repositório modelo criado para servir como base na construção de novos projetos PHP organizados com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
+**Versão:** 1.0.0\
+Cerberus é um repositório modelo criado para servir como base na construção de novos projetos PHP organizados com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
 
 ---
 
 ## ✨ Objetivo
 
-O objetivo deste repositório é fornecer um ponto de partida limpo, organizado e extensível para qualquer projeto PHP que precise de uma estrutura profissional desde o início. Você pode usar este repositório como um **template no GitHub** para criar seus próprios repositórios com apenas um clique.
+Fornecer um ponto de partida limpo, organizado e extensível para qualquer projeto PHP que precise de uma estrutura profissional desde o início. Pensado para uso pessoal, educacional ou profissional, com foco em reutilização e clareza.
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```bash
-📁 **Cerberus**
-
+📁 Cerberus
+│
 ├── LICENSE                  # Licença do projeto
 ├── README.md                # Instruções e explicações do projeto
 ├── _docs                    # Documentação e changelog
@@ -46,54 +44,82 @@ O objetivo deste repositório é fornecer um ponto de partida limpo, organizado 
 │   └── views                # Views organizadas por página ou componente
 └── routes
     └── web.php              # Arquivo de rotas da aplicação
-````
+```
 
 ---
 
-## 🚀 Como usar este repositório como template
+## 🚀 Como usar este template do GitHub
 
-Para criar seu próprio projeto baseado no **Cerberus**, siga os passos abaixo:
+Antes de tudo, você precisa garantir que o repositório esteja configurado como um **template**. Para isso:
 
-1. Acesse o repositório no GitHub:
-   👉 [`https://github.com/darlisamorim/Cerberus`](https://github.com/darlisamorim/Cerberus) e faça o download do arquivos do **Cerberus**.
+1. Acesse o repositório no GitHub.
+2. Vá em **Settings** (configurações).
+3. Marque a opção **Template repository** (localizada na seção "Features").
+4. Pronto! Agora ele poderá ser reutilizado com o botão **Use this template** por qualquer pessoa.
 
-2. Crie um repositório com o nome que quiser. Em seguida vá para dentro das configurações desse novo repositório abaixo do nome do respositorio que voce acaba de criar marque a caixinha Template repository.
+Este repositório foi configurado como **template**. Isso significa que você pode criar um novo projeto com a mesma estrutura com apenas alguns cliques. Veja o passo a passo:
 
-2. Clique no botão verde **"Use this template"** no topo da página, como mostrado na imagem abaixo:
+### 1. Criar um repositório a partir de um template
 
-   ![Use this template](./_docs/assets/use-this-template-button.png)
+Caso você queira **usar este repositório como base** para um novo projeto, siga os passos abaixo. Esse processo pode ser feito com **qualquer repositório público que esteja marcado como "template"**, como é o caso deste.
 
-3. Escolha um nome para o seu novo repositório e clique em **"Create repository from template"**.
+#### Etapas principais:
 
-4. Clone o novo repositório no seu computador:
+1. Acesse o repositório original no GitHub: [`https://github.com/darlisamorim/Cerberus`](https://github.com/darlisamorim/Cerberus)
+2. Clique no botão verde `` no canto superior direito da página.
+3. Você será redirecionado para uma tela chamada **"Create a new repository"**.
+4. O campo **Repository template** já estará preenchido com `darlisamorim/Cerberus`. 
+5. Dê um nome para seu novo repositório no campo **Repository name**.
+6. Escolha se o repositório será público ou privado.
+7. Clique em **Create repository** para finalizar.
 
-   ```bash
-   git clone https://github.com/seu-usuario/seu-novo-projeto.git
-   cd seu-novo-projeto
-   ```
+> Dica: Se você estiver criando esse projeto para um curso, portfólio ou time, escolha nomes descritivos e simples para facilitar a organização e o versionamento.
 
-5. Instale as dependências com o Composer:
+Você também pode acessar diretamente a tela de criação usando este link com o template pré-selecionado:\
+👉 [`https://github.com/new?template_name=Cerberus&template_owner=darlisamorim`](https://github.com/new?template_name=Cerberus\&template_owner=darlisamorim)
 
-   ```bash
-   composer install
-   ```
+> Essa opção funciona apenas se você tiver acesso ao template (em caso de privado) ou se for um template público, como o Cerberus.
+>
+> Você também pode criar um repositório e depois escolher este como **template manualmente**. No formulário de criação do GitHub ([https://github.com/new](https://github.com/new)), selecione "Repository template" e escolha `darlisamorim/Cerberus` (como mostrado nas imagens).
 
-6. Configure seu servidor local (ex: XAMPP, Laragon ou Apache) para apontar para a pasta `public/` como raiz do projeto.
+### 2. O que já vem pronto no template
+
+Após criar seu novo repositório baseado no Cerberus, você perceberá que:
+
+- Toda a estrutura base já está pronta para uso imediato;
+- Os diretórios `app/`, `routes/`, `resources/`, `public/` já estão configurados;
+- Arquivos como `index.php`, `composer.json` e `web.php` já existem e podem ser personalizados.
+
+> ✅ **Importante:** Edite os arquivos de acordo com seu novo projeto — personalize os nomes de páginas, rotas, controladores e outros arquivos conforme necessário.
+
+Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metadados no padrão **PHPDoc** recomendado pela **PHP-FIG**:
+
+```php
+<?php
+/**
+ * @source     Nome do arquivo
+ * @location   Caminho relativo (ex: routes/web.php)
+ * @summary    Breve descrição da finalidade do arquivo
+ *
+ * @package    Cerberus
+ */
+```
+
+Esses comentários ajudam a manter a organização do projeto, facilitam a leitura por outras pessoas desenvolvedoras e garantem maior clareza durante manutenções futuras.
 
 ---
 
 ## 🔧 Requisitos
 
-* PHP >= 8.0
-* Composer instalado globalmente
-* Servidor local (Apache/Nginx ou XAMPP/Laragon)
-* Opcional: GitHub CLI para clonar e configurar rapidamente
+- **PHP** >= 8.0 Globalmente e/ou Servidor Local(Xampp)
+- **Composer** Instalado Globalmente
+- **Git** Instalado Globalmente
 
 ---
 
 ## 🗂 Documentação
 
-A pasta `_docs` contém arquivos de changelog e futuras instruções técnicas, tanto em inglês quanto em português.
+A pasta `_docs` contém arquivos de changelog e instruções futuras, em português e inglês.
 
 ---
 
@@ -103,7 +129,8 @@ Este projeto está licenciado sob os termos da [MIT License](LICENSE).
 
 ---
 
-## 👤 Author
+## 👤 Autor
 
-**Darlis A. Amorim**  
-*Software Engineer and Full Stack Developer of São Paulo/SP.*
+**Darlis A. Amorim**\
+*Software Engineer and Full Stack Developer – São Paulo/SP.*
+
