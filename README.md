@@ -28,7 +28,7 @@ Disallow: /vendor/
 
 ```bash
 📁 Cerberus
-
+│
 ├── robots.txt                 # Regras de indexação para mecanismos de busca  
 ├── LICENSE                    # Licença do projeto
 ├── README.md                  # Instruções e explicações do projeto
