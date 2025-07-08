@@ -1,21 +1,22 @@
 # Cerberus ⚔️
 
-**Versão:** 1.0.0\
-Cerberus é um repositório modelo criado para servir como base na construção de novos projetos PHP organizados com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
+**Versão:** 1.0.0
+
+Cerberus é um repositório modelo criado para servir como base na construção de novos projetos  com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
 
 ---
 
 ## ✨ Objetivo
 
-Fornecer um ponto de partida limpo, organizado e extensível para qualquer projeto PHP que precise de uma estrutura profissional desde o início. Pensado para uso pessoal, educacional ou profissional, com foco em reutilização e clareza.
+Fornecer um ponto de partida limpo, organizado e extensível para qualquer projeto que precise de uma estrutura profissional desde o início. Pensado para uso pessoal, educacional ou profissional, com foco em reutilização e clareza.
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```bash
-📁 Cerberus
-│
+📁 **Cerberus**
+
 ├── LICENSE                  # Licença do projeto
 ├── README.md                # Instruções e explicações do projeto
 ├── _docs                    # Documentação e changelog
@@ -66,7 +67,7 @@ Caso você queira **usar este repositório como base** para um novo projeto, sig
 #### Etapas principais:
 
 1. Acesse o repositório original no GitHub: [`https://github.com/darlisamorim/Cerberus`](https://github.com/darlisamorim/Cerberus)
-2. Clique no botão verde `` no canto superior direito da página.
+2. Clique no botão verde **Use this template** no canto superior direito da página.
 3. Você será redirecionado para uma tela chamada **"Create a new repository"**.
 4. O campo **Repository template** já estará preenchido com `darlisamorim/Cerberus`. 
 5. Dê um nome para seu novo repositório no campo **Repository name**.
@@ -75,12 +76,8 @@ Caso você queira **usar este repositório como base** para um novo projeto, sig
 
 > Dica: Se você estiver criando esse projeto para um curso, portfólio ou time, escolha nomes descritivos e simples para facilitar a organização e o versionamento.
 
-Você também pode acessar diretamente a tela de criação usando este link com o template pré-selecionado:\
-👉 [`https://github.com/new?template_name=Cerberus&template_owner=darlisamorim`](https://github.com/new?template_name=Cerberus\&template_owner=darlisamorim)
-
-> Essa opção funciona apenas se você tiver acesso ao template (em caso de privado) ou se for um template público, como o Cerberus.
->
-> Você também pode criar um repositório e depois escolher este como **template manualmente**. No formulário de criação do GitHub ([https://github.com/new](https://github.com/new)), selecione "Repository template" e escolha `darlisamorim/Cerberus` (como mostrado nas imagens).
+Você também pode acessar diretamente a tela de criação usando este link com o template pré-selecionado:
+👉 [`https://github.com/new?template_name=Cerberus&template_owner=darlisamorim`](https://github.com/new?template_name=Cerberus&template_owner=darlisamorim)
 
 ### 2. O que já vem pronto no template
 
@@ -111,7 +108,7 @@ Esses comentários ajudam a manter a organização do projeto, facilitam a leitu
 
 ## 🔧 Requisitos
 
-- **PHP** >= 8.0 Globalmente e/ou Servidor Local(Xampp)
+- **PHP** >= 8.0 (recomendado uso com XAMPP, Laragon ou ambiente local)
 - **Composer** Instalado Globalmente
 - **Git** Instalado Globalmente
 
@@ -119,7 +116,12 @@ Esses comentários ajudam a manter a organização do projeto, facilitam a leitu
 
 ## 🗂 Documentação
 
-A pasta `_docs` contém arquivos de changelog e instruções futuras, em português e inglês.
+A pasta `_docs` contém arquivos de changelog e futuras instruções técnicas, disponíveis em dois idiomas:
+
+- 📘 [Changelog em Português (pt-BR)](_docs/CHANGELOG.pt-BR.md)
+- 📘 [Changelog em Inglês (en-US)](_docs/CHANGELOG.en-US.md)&#x20;
+
+
 
 ---
 
