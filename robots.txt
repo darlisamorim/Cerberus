@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+
+Disallow: /app/
+Disallow: /routes/
+Disallow: /resources/
+Disallow: /_docs/
+Disallow: /vendor/

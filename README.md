@@ -1,7 +1,6 @@
 # Cerberus ⚔️
 
-**Versão:** 1.0.0
-
+**Versão:** 1.0.0\
 Cerberus é um repositório modelo criado para servir como base na construção de novos projetos  com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
 
 ---
@@ -14,37 +13,51 @@ Fornecer um ponto de partida limpo, organizado e extensível para qualquer proje
 
 ## 📁 Estrutura do Projeto
 
-```bash
-📁 **Cerberus**
+Este projeto também inclui um arquivo `robots.txt` configurado para restringir o acesso de robôs a certas pastas internas:
 
-├── LICENSE                  # Licença do projeto
-├── README.md                # Instruções e explicações do projeto
-├── _docs                    # Documentação e changelog
+```txt
+User-Agent: *
+Allow: /
+
+Disallow: /app/
+Disallow: /routes/
+Disallow: /resources/
+Disallow: /_docs/
+Disallow: /vendor/
+```
+
+```bash
+📁 Cerberus
+
+├── robots.txt                 # Regras de indexação para mecanismos de busca  
+├── LICENSE                    # Licença do projeto
+├── README.md                  # Instruções e explicações do projeto
+├── _docs                      # Documentação e changelog
 │   ├── CHANGELOG.md
 │   └── CHANGELOG.pt-BR.md
-├── app                      # Código principal da aplicação
-│   ├── Controllers          # Lógica de controle
-│   ├── Models               # Modelos de dados
-│   └── Views                # Templates HTML ou arquivos de visualização
-├── composer.json            # Gerenciamento de dependências PHP
-├── public                   # Pasta pública (ponto de entrada)
-│   └── index.php            # Arquivo de entrada da aplicação
-├── resources                # Recursos estáticos e views
-│   ├── assets               # Assets (CSS, JS, imagens, fontes)
-│   │   ├── css
-│   │   │   ├── main.css
-│   │   │   └── queries.css
-│   │   ├── fonts
-│   │   ├── images
-│   │   │   ├── favicon.png
-│   │   │   ├── logo.png
-│   │   │   └── notfound.png
-│   │   └── js
-│   │       ├── jquery.min.js
-│   │       └── main.js
-│   └── views                # Views organizadas por página ou componente
+├── app                        # Código principal da aplicação
+│   ├── Controllers            # Lógica de controle
+│   ├── Models                 # Modelos de dados
+│   └── Views                  # Templates HTML ou arquivos de visualização
+├── composer.json              # Gerenciamento de dependências PHP
+├── public                     # Pasta pública (ponto de entrada)
+│   └── index.php              # Arquivo de entrada da aplicação
+├── resources                  # Recursos estáticos e views
+│   ├── assets                 # Assets (CSS, JS, imagens, fontes)
+│   │   ├── css                # Arquivos de estilo CSS do projeto
+│   │   │   ├── main.css       # Estilos principais da aplicação
+│   │   │   └── queries.css    # Estilos responsivos e media queries
+│   │   ├── fonts              # Fontes customizadas utilizadas na aplicação
+│   │   ├── images             # Imagens da interface do projeto
+│   │   │   ├── favicon.png    # Ícone exibido na aba do navegador
+│   │   │   ├── logo.png       # Logotipo da aplicação
+│   │   │   └── notfound.png   # Imagem exibida em páginas de erro 404
+│   │   └── js                 # Scripts JavaScript
+│   │       ├── jquery.min.js  # Biblioteca jQuery (minificada)
+│   │       └── main.js        # Scripts customizados do projeto
+│   └── views                  # Views organizadas por página ou componente
 └── routes
-    └── web.php              # Arquivo de rotas da aplicação
+    └── web.php                # Arquivo de rotas da aplicação
 ```
 
 ---
@@ -76,8 +89,7 @@ Caso você queira **usar este repositório como base** para um novo projeto, sig
 
 > Dica: Se você estiver criando esse projeto para um curso, portfólio ou time, escolha nomes descritivos e simples para facilitar a organização e o versionamento.
 
-Você também pode acessar diretamente a tela de criação usando este link com o template pré-selecionado:
-👉 [`https://github.com/new?template_name=Cerberus&template_owner=darlisamorim`](https://github.com/new?template_name=Cerberus&template_owner=darlisamorim)
+Você também pode acessar diretamente a tela de criação usando este link com o template pré-selecionado: 👉 [`https://github.com/new?template_name=Cerberus&template_owner=darlisamorim`](https://github.com/new?template_name=Cerberus\&template_owner=darlisamorim)
 
 ### 2. O que já vem pronto no template
 
