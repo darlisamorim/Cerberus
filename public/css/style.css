@@ -1,0 +1,12 @@
+/*
+ *      Files compiled files Sass (scss), to one file style.css
+ *
+ */
+
+@import "_normalize.css";       /* Reset CSS */
+@import "_cssoo.css";           /* Flex Style */
+@import "_animate.css";         /* Animate CSS */
+@import "_main.css";            /* Content CSS */
+@import "_header.css";          /* Header CSS */
+@import "_footer.css";          /* Footer CSS */
+@import "_queries.css";         /* Media Queries */

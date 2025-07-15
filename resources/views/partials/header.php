@@ -1,36 +1,44 @@
 <?php
-require 'source/environment.php';
+/**
+ * @source     header.php
+ * @location   resources/views/partials/header.php
+ * @summary    Cabeçalho HTML principal do site, incluindo charset, viewport, metas e fontes.
+ *
+ * @author     Darlis A. Amorim <eu@darlisalvesamorim.com>
+ * @see        https://github.com/darlisamorim/Cerberus
+ * @package    Cerberus
+ */
 ?><!DOCTYPE html>
-<html lang="<?= DAA_LOCALE; ?>" itemscope itemtype="<?= DAA_SCHEMA; ?>" prefix="og: <?= DAA_SCHEMA_OPEN_GRAPH; ?>">
+<html lang="{{ $locale }}" itemscope itemtype="{{ $schema }}" prefix="og: {{ $schema_open_graph }}">
 <!-- Set your country language and website schema -->
 
 <head>
-    <meta charset="<?= DAA_CHARSET; ?>"/> <!-- Unicode default( UTF-8 )  -->
+    <meta charset="{{ $charset }}"/> <!-- Unicode default( UTF-8 )  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Default vieweport responsive design -->
-    <title><?= DAA_NAME; ?> | <?= DAA_SUBNAME; ?></title> <!-- Website Title -->
+    <title>{{ $name }} | {{ $subname }}</title> <!-- Website Title -->
 
     <!-- Defaults Metas -->
-    <meta name="description" content="<?= DAA_DESCRIPTION; ?>"/> <!-- Website Description -->
+    <meta name="description" content="{{ $description }}"/> <!-- Website Description -->
     <meta name="robots" content="index, follow"/> <!-- Allow browsers to index -->
-    <meta name="google-site-verification" content="<?= DAA_GOOGLE_VERI; ?>"/> <!-- Tag Google -->
+    <meta name="google-site-verification" content="{{ $google_veri }}"/> <!-- Tag Google -->
 
     <!-- Defaults Links -->
-    <link rel="base" href="<?= DOMAIN; ?>"/> <!-- Website Url -->
-    <link rel="canonical" href="<?= DOMAIN; ?>"/> <!-- Website Url -->
-    <link rel="alternate" type="application/rss+xml" href="<?= DOMAIN; ?>/rss.php"/> <!-- RSS Url -->
-    <link rel="sitemap" type="application/xml" href="<?= DOMAIN; ?>/sitemap.php"/> <!-- Sitemap Url -->
-    <link rel="author" href="<?= DAA_LINKEDIN; ?>"/>
+    <link rel="base" href="{{ $domain }}"/> <!-- Website Url -->
+    <link rel="canonical" href="{{ $domain }}"/> <!-- Website Url -->
+    <link rel="alternate" type="application/rss+xml" href="{{ $domain }}/rss.xml"/> <!-- RSS Url -->
+    <link rel="sitemap" type="application/xml" href="{{ $domain }}/sitemap.xml"/> <!-- Sitemap Url -->
+    <link rel="author" href="{{ $linkedin }}"/>
     <!-- Personal profile of the author of the site ( Example Facebook profile )  -->
-    <link rel="publisher" href="<?= DAA_LINKEDIN; ?>"/>
+    <link rel="publisher" href="{{ $linkedin }}"/>
     <!-- Personal website page (Example website page on Facebook) -->
 
-    <?php require 'source/seo.php'; ?>
+    <?php BladeEnv::metas(); ?>
     <!-- All Metas( Itemprop and Property ( Og:, Article:, Twitter: ) ) -->
 
-    <link rel="shortcut icon" href="<?= DOMAIN; ?>/_storage/images/<?= DAA_IMAGE_FAVICON; ?>"/> <!-- Imagem Favicon -->
+    <link rel="shortcut icon" href="{{ $domain }}/_storage/images/{{ $image_favicon }}"/> <!-- Imagem Favicon -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=<?= DAA_FONT_NAME; ?>:wght@<?= DAA_FONT_WEIGHT; ?>&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family={{ $font_name }}:wght@{{ $font_weight }}&display=swap"
           rel="stylesheet"> <!-- Importing font from google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
@@ -58,7 +66,7 @@ require 'source/environment.php';
     <link rel="stylesheet" href="_storage/css/components/animate.css"> <!-- Animete Style -->
 
     <!--[if lt IE 9]>
-      <script src="<?= DOMAIN; ?>/_storage/js/html5shiv.js"></script>
+    <script src="{{ $domain }}/_storage/js/html5shiv.js"></script>
     <![endif]-->
 
 </head>
@@ -68,17 +76,17 @@ require 'source/environment.php';
 <header class="header container">
     <div class="content__flex">
         <h1 class="header__logotipo">
-            <strong>Darlis</strong> Alves Amorim<b>_</b> <span class="dn">| <?= DAA_DESCRIPTION; ?></span>
+            <strong>Darlis</strong> Alves Amorim<b>_</b> <span class="dn">| {{ $description }}</span>
         </h1>
 
         <nav class="header__menu">
             <h3 class="fz">
-                Navegação | <?= DAA_NAME; ?>
+                Navegação | {{ $name }}
             </h3>
             <ul>
-                <li><a title="Portfólios | <?= DAA_NAME; ?>" href="">Portfólios</a></li>
-                <li><a title="Open Source | <?= DAA_NAME; ?>" href="">Open Source</a></li>
-                <li><a title="Notas | <?= DAA_NAME; ?>" href="">Notas</a></li>
+                <li><a title="Portfólios | {{ $name }}" href="">Portfólios</a></li>
+                <li><a title="Open Source | {{ $name }}" href="">Open Source</a></li>
+                <li><a title="Notas | {{ $name }}" href="">Notas</a></li>
             </ul>
         </nav>
         <ul class="header__tools">
@@ -89,19 +97,19 @@ require 'source/environment.php';
                 <i class='bx bxs-moon'></i>
             </li>
             <li>
-                <a title="Links Sociais | <?= DAA_NAME; ?>" href="<?= DAA_LINKS; ?>" target="_blank">
+                <a title="Links Sociais | {{ $name }}" href="{{ $links }}" target="_blank">
                     <i class='bx bxs-share-alt'></i>
                     Social
                 </a>
             </li>
             <li>
-                <a title="GitHub | <?= DAA_NAME; ?>" href="https://www.github.com/<?= DAA_GITHUB; ?>" target="_blank">
+                <a title="GitHub | {{ $name }}" href="https://www.github.com/{{ $github }}" target="_blank">
                     <i class='bx bxl-github'></i>
                     GitHub
                 </a>
             </li>
             <li>
-                <a title="Linkedin | <?= DAA_NAME; ?>" href="<?= DAA_LINKEDIN; ?>" target="_blank">
+                <a title="Linkedin | {{ $name }}" href="{{ $linkedin }}" target="_blank">
                     <i class='bx bxl-linkedin-square'></i>
                     Linkedin
                 </a>
@@ -118,20 +126,20 @@ require 'source/environment.php';
         <article class="header__article">
             <header class="header__article__group">
                 <h2>
-                    <?= DAA_OFFICE; ?>
+                    {{ $office }}
                 </h2>
                 <h3>
-                    <?= DAA_SUBNAME; ?>
+                    {{ $subname }}
                 </h3>
             </header>
             <p>
-                <?= DAA_DESCRIPTION; ?>
+                {{ $description }}
             </p>
             <button><i class="bx bxs-download"></i> Download CV</button>
         </article>
         <figure class="header__figure">
-            <img width="440" src="<?= DOMAIN; ?>/_storage/images/developer.svg" title="<?= DAA_NAME; ?>"
-                 alt="<?= DAA_DESCRIPTION; ?>">
+            <img width="440" src="{{ $domain }}/_storage/images/developer.svg" title="{{ $name }}"
+                 alt="{{ $description }}">
         </figure>
     </div>
 

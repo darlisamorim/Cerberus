@@ -39,7 +39,7 @@ Disallow: /vendor/
 │   ├── Controllers            # Lógica de controle
 │   ├── Models                 # Modelos de dados
 │   └── Views                  # Templates HTML ou arquivos de visualização
-├── composer.json              # Gerenciamento de dependências PHP
+├── composer.json.example              # Gerenciamento de dependências PHP
 ├── public                     # Pasta pública (ponto de entrada)
 │   └── index.php              # Arquivo de entrada da aplicação
 ├── resources                  # Recursos estáticos e views
@@ -50,7 +50,7 @@ Disallow: /vendor/
 │   │   ├── fonts              # Fontes customizadas utilizadas na aplicação
 │   │   ├── images             # Imagens da interface do projeto
 │   │   │   ├── favicon.png    # Ícone exibido na aba do navegador
-│   │   │   ├── logo.png       # Logotipo da aplicação
+│   │   │   ├── logotipo.png       # Logotipo da aplicação
 │   │   │   └── notfound.png   # Imagem exibida em páginas de erro 404
 │   │   └── js                 # Scripts JavaScript
 │   │       ├── jquery.min.js  # Biblioteca jQuery (minificada)
@@ -66,7 +66,7 @@ Disallow: /vendor/
 
 Antes de tudo, você precisa garantir que o repositório esteja configurado como um **template**. Para isso:
 
-1. Acesse o repositório no GitHub.
+1. Acesse seu repositório no GitHub.
 2. Vá em **Settings** (configurações).
 3. Marque a opção **Template repository** (localizada na seção "Features").
 4. Pronto! Agora ele poderá ser reutilizado com o botão **Use this template** por qualquer pessoa.
@@ -82,7 +82,7 @@ Caso você queira **usar este repositório como base** para um novo projeto, sig
 1. Acesse o repositório original no GitHub: [`https://github.com/darlisamorim/Cerberus`](https://github.com/darlisamorim/Cerberus)
 2. Clique no botão verde **Use this template** no canto superior direito da página.
 3. Você será redirecionado para uma tela chamada **"Create a new repository"**.
-4. O campo **Repository template** já estará preenchido com `darlisamorim/Cerberus`. 
+4. O campo **Repository template** já estará preenchido com `darlisamorim/Cerberus`  ou com o nome do seu Repository Template.
 5. Dê um nome para seu novo repositório no campo **Repository name**.
 6. Escolha se o repositório será público ou privado.
 7. Clique em **Create repository** para finalizar.
@@ -96,10 +96,10 @@ Você também pode acessar diretamente a tela de criação usando este link com 
 Após criar seu novo repositório baseado no Cerberus, você perceberá que:
 
 - Toda a estrutura base já está pronta para uso imediato;
-- Os diretórios `app/`, `routes/`, `resources/`, `public/` já estão configurados;
+- Os diretórios `app/`, `routes/`, `resources/`, `public/` já estão criados;
 - Arquivos como `index.php`, `composer.json` e `web.php` já existem e podem ser personalizados.
 
-> ✅ **Importante:** Edite os arquivos de acordo com seu novo projeto — personalize os nomes de páginas, rotas, controladores e outros arquivos conforme necessário.
+> ✅ **Importante:** Edite os arquivos de acordo com seu novo projeto — personalize os nomes de páginas, rotas, controladores e outros arquivos conforme necessário. Abra os arquivos eles contém uma descrição para seu uso.
 
 Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metadados no padrão **PHPDoc** recomendado pela **PHP-FIG**:
 
@@ -110,8 +110,12 @@ Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metada
  * @location   Caminho relativo (ex: routes/web.php)
  * @summary    Breve descrição da finalidade do arquivo
  *
+ * @author     Darlis A. Amorim <eu@darlisalvesamorim.com>
+ * @see        https://github.com/darlisamorim/Cerberus
  * @package    Cerberus
  */
+
+
 ```
 
 Esses comentários ajudam a manter a organização do projeto, facilitam a leitura por outras pessoas desenvolvedoras e garantem maior clareza durante manutenções futuras.
@@ -120,7 +124,7 @@ Esses comentários ajudam a manter a organização do projeto, facilitam a leitu
 
 ## 🔧 Requisitos
 
-- **PHP** >= 8.0 (recomendado uso com XAMPP, Laragon ou ambiente local)
+- **PHP** >= 8.0 (recomendado uso com XAMPP, Laragon ou ambiente local/profissional)
 - **Composer** Instalado Globalmente
 - **Git** Instalado Globalmente
 
