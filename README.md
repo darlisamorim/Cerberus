@@ -65,25 +65,6 @@ Após criar seu novo repositório baseado no Cerberus, você perceberá que:
 
 > ✅ **Importante:** Edite os arquivos de acordo com seu novo projeto — personalize os nomes de páginas, rotas, controladores e outros arquivos conforme necessário. Abra os arquivos eles contém uma descrição para seu uso.
 
-Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metadados no padrão **PHPDoc** recomendado pela **PHP-FIG**:
-
-```php
-<?php
-/**
- * @source     Nome do arquivo
- * @location   Caminho relativo (ex: routes/web.php)
- * @summary    Breve descrição da finalidade do arquivo
- *
- * @author     Darlis A. Amorim <eu@darlisalvesamorim.com>
- * @see        https://github.com/darlisamorim/Cerberus
- * @package    Cerberus
- */
-
-
-```
-
-Esses comentários ajudam a manter a organização do projeto, facilitam a leitura por outras pessoas desenvolvedoras e garantem maior clareza durante manutenções futuras.
-
 ---
 ## 📁 Estrutura do Projeto
 
@@ -147,6 +128,26 @@ Esses comentários ajudam a manter a organização do projeto, facilitam a leitu
 └── routes/
     └── web.php                    # Definições de rotas da aplicação
 ```
+
+Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metadados no padrão **PHPDoc** recomendado pela **PHP-FIG**:
+
+```php
+<?php
+/**
+ * @source     Nome do arquivo
+ * @location   Caminho relativo (ex: routes/web.php)
+ * @summary    Breve descrição da finalidade do arquivo
+ *
+ * @author     Darlis A. Amorim <eu@darlisalvesamorim.com>
+ * @see        https://github.com/darlisamorim/Cerberus
+ * @package    Cerberus
+ */
+
+
+```
+
+Esses comentários ajudam a manter a organização do projeto, facilitam a leitura por outras pessoas desenvolvedoras e garantem maior clareza durante manutenções futuras.
+
 
 ---
 
