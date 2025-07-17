@@ -15,7 +15,7 @@ Ele vem pronto para uso com:
 - Comentários em padrão PHPDoc em todos os arquivos principais;
 - Documentação (`_docs/`), changelogs.
 
-Seja para projetos pessoais, educacionais ou profissionais, Cerberus te poupa tempo ao iniciar com uma base bem pensada, responsiva e pronta para escalar. Os arquivo e pastas estão la basta começar a codar e elabora-los.
+Seja para projetos pessoais, educacionais ou profissionais, Cerberus te poupa tempo ao iniciar com uma base bem pensada, responsiva e pronta para escalar. Os arquivos e pastas já estão lá — basta começar a codar e estruturá-los.
 
 
 ---
@@ -112,8 +112,8 @@ Esses comentários ajudam a manter a organização do projeto, facilitam a leitu
 │   │   └── main.js                 # Scripts .JS finais compilados para produção
 │   ├── index.php                   # Arquivo de entrada principal da aplicação
 │   ├── robots.txt                  # Regras de indexação para mecanismos de busca
-│   ├── rss.php                     # Feed RSS dinâmico com suporte a variáveis
-│   ├── sitemap.php                 # Mapa do site XML dinâmico para SEO
+│   ├── rss.php                     # Gera o conteúdo do RSS acessado via /rss.xml
+│   ├── sitemap.php                 # Gera o sitemap acessado via /sitemap.xml
 │
 ├── resources/                      # Recursos visuais e arquivos reutilizáveis
 │   ├── assets/
@@ -167,12 +167,12 @@ O **sitemap.xml** é um arquivo que lista todas as URLs públicas do seu site, i
 
 Isso facilita a **indexação completa e eficiente** do seu site, melhorando o ranqueamento nos mecanismos de busca.
 
-### 🔧 O que o Cerberus já oferece?
+### 🔧 O que o Cerberus já entrega pronto
 
-- `rss.php` → Gera um feed RSS dinâmico em tempo real.
-- `sitemap.php` → Gera automaticamente o mapa do site com base nas URLs existentes.
-- `.htaccess` → Redireciona URLs amigáveis (`rss.xml` e `sitemap.xml`) para esses arquivos PHP sem quebrar a semântica.
-- Templates prontos com exemplos de `foreach` para gerar os conteúdos dinamicamente.
+- `rss.php` → Responsável por gerar o conteúdo do feed RSS de forma dinâmica.
+- `sitemap.php` → Cria automaticamente o sitemap XML com base nas páginas do site.
+- `.htaccess` → Redireciona URLs como `/rss.xml` e `/sitemap.xml` para os arquivos PHP reais.
+- Estrutura pronta com exemplos de `foreach` para listar posts e páginas dinamicamente.
 
 ---
 
