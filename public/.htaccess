@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redireciona URLs amigáveis para os arquivos PHP que geram os feeds dinamicamente
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+RewriteRule ^rss.xml$ rss.php [L]

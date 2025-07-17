@@ -1,64 +1,28 @@
 # Cerberus ⚔️
 
 **Versão:** 1.0.0\
-Cerberus é um repositório modelo criado para servir como base na construção de novos projetos  com uma estrutura MVC simples, inspirado em frameworks modernos como Laravel. Este template facilita o início de projetos padronizados e reutilizáveis, seja para APIs, sites institucionais ou projetos pessoais.
+Cerberus é um repositório modelo pensado para acelerar a criação de novos projetos PHP com uma estrutura organizada, enxuta e reutilizável, baseada no padrão MVC (Model-View-Controller).
+
+Inspirado em frameworks modernos como o Laravel, este template oferece uma base sólida para desenvolver aplicações web, APIs ou sites institucionais, com foco em clareza, produtividade e boas práticas.
+
+Ele vem pronto para uso com:
+
+- Arquivo de rotas (`routes/web.php`) e controle de fluxo;
+- Páginas organizadas em views modulares;
+- Recursos visuais em `resources/` com CSS, JS, imagens e fontes;
+- SEO moderno com metatags dinâmicas, suporte a Open Graph e Twitter Cards;
+- Otimização para buscadores com `robots.txt`, `sitemap.xml` e `rss.xml`;
+- Comentários em padrão PHPDoc em todos os arquivos principais;
+- Documentação (`_docs/`), changelogs.
+
+Seja para projetos pessoais, educacionais ou profissionais, Cerberus te poupa tempo ao iniciar com uma base bem pensada, responsiva e pronta para escalar. Os arquivo e pastas estão la basta começar a codar e elabora-los.
+
 
 ---
 
 ## ✨ Objetivo
 
 Fornecer um ponto de partida limpo, organizado e extensível para qualquer projeto que precise de uma estrutura profissional desde o início. Pensado para uso pessoal, educacional ou profissional, com foco em reutilização e clareza.
-
----
-
-## 📁 Estrutura do Projeto
-
-Este projeto também inclui um arquivo `robots.txt` configurado para restringir o acesso de robôs a certas pastas internas:
-
-```txt
-User-Agent: *
-Allow: /
-
-Disallow: /app/
-Disallow: /routes/
-Disallow: /resources/
-Disallow: /_docs/
-Disallow: /vendor/
-```
-
-```bash
-📁 Cerberus
-│
-├── robots.txt                 # Regras de indexação para mecanismos de busca  
-├── LICENSE                    # Licença do projeto
-├── README.md                  # Instruções e explicações do projeto
-├── _docs                      # Documentação e changelog
-│   ├── CHANGELOG.md
-│   └── CHANGELOG.pt-BR.md
-├── app                        # Código principal da aplicação
-│   ├── Controllers            # Lógica de controle
-│   ├── Models                 # Modelos de dados
-│   └── Views                  # Templates HTML ou arquivos de visualização
-├── composer.json.example              # Gerenciamento de dependências PHP
-├── public                     # Pasta pública (ponto de entrada)
-│   └── index.php              # Arquivo de entrada da aplicação
-├── resources                  # Recursos estáticos e views
-│   ├── assets                 # Assets (CSS, JS, imagens, fontes)
-│   │   ├── css                # Arquivos de estilo CSS do projeto
-│   │   │   ├── main.css       # Estilos principais da aplicação
-│   │   │   └── queries.css    # Estilos responsivos e media queries
-│   │   ├── fonts              # Fontes customizadas utilizadas na aplicação
-│   │   ├── images             # Imagens da interface do projeto
-│   │   │   ├── favicon.png    # Ícone exibido na aba do navegador
-│   │   │   ├── logotipo.png       # Logotipo da aplicação
-│   │   │   └── notfound.png   # Imagem exibida em páginas de erro 404
-│   │   └── js                 # Scripts JavaScript
-│   │       ├── jquery.min.js  # Biblioteca jQuery (minificada)
-│   │       └── main.js        # Scripts customizados do projeto
-│   └── views                  # Views organizadas por página ou componente
-└── routes
-    └── web.php                # Arquivo de rotas da aplicação
-```
 
 ---
 
@@ -121,6 +85,177 @@ Além disso, todos os arquivos `.php` já vêm comentados com um bloco de metada
 Esses comentários ajudam a manter a organização do projeto, facilitam a leitura por outras pessoas desenvolvedoras e garantem maior clareza durante manutenções futuras.
 
 ---
+## 📁 Estrutura do Projeto
+
+```bash
+📁 Cerberus
+│
+├── LICENSE                         # Licença do projeto (MIT)
+├── README.md                       # Instruções e informações sobre o projeto
+│
+├── _docs/                          # Documentação e changelogs
+│   ├── CHANGELOG.en-US.md          # Registro de mudanças (Inglês)
+│   └── CHANGELOG.pt-BR.md          # Registro de mudanças (Português)
+│
+├── app/                            # Código principal da aplicação (estrutura MVC)
+│   ├── Controllers/                # Controladores (lógica do sistema)
+│   ├── Models/                     # Modelos de dados
+│   └── Views/                      # Visualizações principais (Views)
+│
+├── composer.json.example           # Arquivo de exemplo para dependências do Composer
+│
+├── public/                         # Pasta pública (acessada pelo navegador)
+│   ├── .htaccess                   # Regras de redirecionamento (ex: rss.xml → rss.php)
+│   ├── css/
+│   │   └── style.css               # Estilos .CSS finais compilados para produção
+│   ├── js/
+│   │   └── main.js                 # Scripts .JS finais compilados para produção
+│   ├── index.php                   # Arquivo de entrada principal da aplicação
+│   ├── robots.txt                  # Regras de indexação para mecanismos de busca
+│   ├── rss.php                     # Feed RSS dinâmico com suporte a variáveis
+│   ├── sitemap.php                 # Mapa do site XML dinâmico para SEO
+│
+├── resources/                      # Recursos visuais e arquivos reutilizáveis
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── components/
+│   │   │   │   ├── animate.css     # Animações base
+│   │   │   │   ├── cssoo.css       # Estilos gerais do projeto
+│   │   │   │   ├── normalize.css   # Reset CSS moderno
+│   │   │   │   └── queries.css     # Media queries responsivas
+│   │   │   ├── footer.css          # Estilos do rodapé
+│   │   │   ├── header.css          # Estilos do cabeçalho
+│   │   │   └── main.css            # Estilos principais da aplicação
+│   │   ├── fonts/                  # Fontes utilizadas no projeto
+│   │   ├── images/
+│   │   │   ├── favicon.png         # Ícone exibido no navegador
+│   │   │   ├── logotipo.png        # Logotipo do site
+│   │   │   ├── notfound.png        # Imagem para páginas de erro 404
+│   │   │   └── share.png           # Imagem para compartilhamento em redes sociais
+│   │   └── js/
+│   │       ├── html5shiv.js       # Suporte a HTML5 para navegadores antigos
+│   │       ├── jquery.min.js      # Biblioteca jQuery (minificada)
+│   │       └── main.js            # Scripts personalizados da aplicação
+│   └── views/
+│       ├── layouts/               # Estruturas globais (layouts base)
+│       ├── pages/                 # Páginas completas (ex: home, sobre, contato)
+│       └── partials/
+│           ├── footer.php         # Rodapé HTML com scripts finais
+│           ├── header.php         # Cabeçalho HTML com charset, fontes, metas
+│           └── metas.php          # Metatags dinâmicas para SEO, OpenGraph e Twitter
+│
+└── routes/
+    └── web.php                    # Definições de rotas da aplicação
+```
+
+---
+
+## 🌐 Sitemap, RSS dinâmico e redirecionamento com .htaccess
+
+O Cerberus oferece suporte nativo a SEO técnico, incluindo um **feed RSS dinâmico** e um **sitemap.xml gerado automaticamente**, construídos com PHP e preparados para serem interpretados corretamente por navegadores, motores de busca e leitores de feed.
+
+### ✅ O que é RSS?
+
+O **RSS (Really Simple Syndication)** é um formato em XML que permite distribuir automaticamente os conteúdos mais recentes do seu site (como posts, atualizações e notícias). Plataformas como Feedly, Inoreader, redes sociais e ferramentas de indexação leem esse feed para manter os usuários informados das novidades sem precisar visitar o site manualmente.
+
+### ✅ O que é um Sitemap?
+
+O **sitemap.xml** é um arquivo que lista todas as URLs públicas do seu site, informando ao Google e outros buscadores:
+- quais páginas existem,
+- quando foram modificadas pela última vez,
+- e com que frequência devem ser reindexadas.
+
+Isso facilita a **indexação completa e eficiente** do seu site, melhorando o ranqueamento nos mecanismos de busca.
+
+### 🔧 O que o Cerberus já oferece?
+
+- `rss.php` → Gera um feed RSS dinâmico em tempo real.
+- `sitemap.php` → Gera automaticamente o mapa do site com base nas URLs existentes.
+- `.htaccess` → Redireciona URLs amigáveis (`rss.xml` e `sitemap.xml`) para esses arquivos PHP sem quebrar a semântica.
+- Templates prontos com exemplos de `foreach` para gerar os conteúdos dinamicamente.
+
+---
+
+### 🔗 Referências Oficiais
+
+- 📡 [Especificação RSS 2.0 (W3C Validator)](https://validator.w3.org/feed/docs/rss2.html)
+- 🗺️ [Protocolo oficial Sitemap (sitemaps.org)](https://www.sitemaps.org/protocol.html)
+
+
+---
+
+### 📄 Por que `.rss.php` e `.sitemap.php` em vez de `.xml`?
+
+Arquivos `.xml` são estáticos e não interpretam código PHP. Isso impede o uso de variáveis, loops ou qualquer conteúdo dinâmico.
+
+Com `.php`, você pode gerar XML válido dinamicamente, usando dados do banco de dados ou arrays, com este cabeçalho no topo do arquivo:
+
+```php
+<?php
+header('Content-Type: application/rss+xml; charset=UTF-8'); // ou application/xml para sitemap
+?>
+```
+
+A saída continuará sendo válida como RSS/XML e será lida por serviços como o Google Search Console, Feedly, Inoreader, etc.
+
+
+---
+
+### 🔁 Redirecionamento com `.htaccess`
+
+O arquivo `.htaccess` já vem configurado para permitir que visitantes acessem `/rss.xml` e `/sitemap.xml`, mesmo os arquivos reais sendo `.php`:
+
+```apacheconf
+RewriteEngine On
+RewriteRule ^rss.xml$ rss.php [L]
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+```
+
+---
+
+### 🧩 Estrutura do RSS com loop
+
+No `rss.php`, é possível gerar diversos `<item>` dinamicamente com um `foreach`, como este exemplo:
+
+```php
+<?php foreach ($posts as $post): ?>
+<item>
+    <title><?= htmlspecialchars($post['titulo']) ?></title>
+    <link><?= SITE_URL ?>/post/<?= $post['slug'] ?></link>
+    <description><?= htmlspecialchars($post['descricao']) ?></description>
+    <pubDate><?= date(DATE_RSS, strtotime($post['data'])) ?></pubDate>
+    <guid><?= SITE_URL ?>/post/<?= $post['slug'] ?></guid>
+</item>
+<?php endforeach; ?>
+```
+
+Cada `<item>` representa um post/artigo no seu feed.
+
+---
+
+### 🗺️ Estrutura do Sitemap com loop
+
+No `sitemap.php`, você pode iterar sobre páginas assim:
+
+```php
+<?php foreach ($paginas as $pagina): ?>
+<url>
+    <loc><?= SITE_URL ?>/<?= $pagina['url'] ?></loc>
+    <lastmod><?= $pagina['data'] ?></lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<?php endforeach; ?>
+```
+
+---
+
+### 📌 Observação
+
+Os exemplos acima já utilizam variáveis reais em PHP (`$post['titulo']`, `SITE_URL`, etc.), mas você pode adaptar conforme sua estrutura de dados — seja com arrays, objetos ou resultados do banco de dados.
+
+---
+
 
 ## 🔧 Requisitos
 

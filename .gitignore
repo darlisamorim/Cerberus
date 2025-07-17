@@ -1335,7 +1335,7 @@ wp-config.php
 
 # Log files
 
-# htaccess
+# .htaccess
 /.htaccess
 
 # All plugins
